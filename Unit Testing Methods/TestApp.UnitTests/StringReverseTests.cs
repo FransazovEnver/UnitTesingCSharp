@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System.Linq;
 
 namespace TestApp.UnitTests;
 
@@ -9,23 +10,39 @@ public class StringReverseTests
     public void Test_Reverse_WhenGivenEmptyString_ReturnsEmptyString()
     {
         // Arrange
+        string input = "";
+        string expected = "";
 
         // Act
-        //StringReverse.Reverse(input);
+        expected = StringReverse.Reverse(input);
 
         // Assert
-        //Assert.AreEqual();
+        Assert.AreEqual(expected, input);
     }
 
     [Test]
     public void Test_Reverse_WhenGivenSingleCharacterString_ReturnsSameCharacter()
     {
-        // TODO: Write your test here...
+        //Arrange
+        string input = "r";
+        string expected = "r";
+
+        // Act 
+        expected = StringReverse.Reverse(input);
+
+        //Assert
+        Assert.AreEqual(expected, input);
     }
 
     [Test]
     public void Test_Reverse_WhenGivenNormalString_ReturnsReversedString()
     {
-        // TODO: Write your test here...
+        //Arrange
+        string input = "Selenium";
+        string expected = "muineleS";
+        //Act
+        string actual = StringReverse.Reverse(input);
+        //Assert
+        Assert.AreEqual(expected, actual);
     }
 }
