@@ -5,7 +5,6 @@ namespace TestApp.UnitTests;
 
 public class StringReverseTests
 {
-    // TODO: finish test
     [Test]
     public void Test_Reverse_WhenGivenEmptyString_ReturnsEmptyString()
     {
